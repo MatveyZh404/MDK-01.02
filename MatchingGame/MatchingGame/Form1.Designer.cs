@@ -51,6 +51,7 @@
             this.главнаяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.изменитьЦветМенюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.закрытьИгруToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.запуститьИгруToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -302,10 +303,11 @@
             // 
             this.главнаяToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.изменитьЦветМенюToolStripMenuItem,
-            this.закрытьИгруToolStripMenuItem});
+            this.закрытьИгруToolStripMenuItem,
+            this.запуститьИгруToolStripMenuItem});
             this.главнаяToolStripMenuItem.Name = "главнаяToolStripMenuItem";
-            this.главнаяToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
-            this.главнаяToolStripMenuItem.Text = "Главная";
+            this.главнаяToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.главнаяToolStripMenuItem.Text = "Файл";
             // 
             // изменитьЦветМенюToolStripMenuItem
             // 
@@ -320,6 +322,13 @@
             this.закрытьИгруToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.закрытьИгруToolStripMenuItem.Text = "Закрыть игру";
             this.закрытьИгруToolStripMenuItem.Click += new System.EventHandler(this.закрытьИгруToolStripMenuItem_Click);
+            // 
+            // запуститьИгруToolStripMenuItem
+            // 
+            this.запуститьИгруToolStripMenuItem.Name = "запуститьИгруToolStripMenuItem";
+            this.запуститьИгруToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.запуститьИгруToolStripMenuItem.Text = "Запустить игру";
+            this.запуститьИгруToolStripMenuItem.Click += new System.EventHandler(this.запуститьИгруToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -364,6 +373,7 @@
         private System.Windows.Forms.ToolStripMenuItem главнаяToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem изменитьЦветМенюToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem закрытьИгруToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem запуститьИгруToolStripMenuItem;
     }
 }
 

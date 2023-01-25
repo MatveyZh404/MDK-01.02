@@ -110,7 +110,6 @@ namespace MatchingGame
             }
 
             MessageBox.Show("You matched all the icons!", "Congratulations");
-            Close();
         }
 
         private void изменитьЦветМенюToolStripMenuItem_Click(object sender, EventArgs e)
@@ -122,6 +121,19 @@ namespace MatchingGame
         private void закрытьИгруToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void запуститьИгруToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Go through all of the labels in the TableLayoutPanel, 
+            // checking each one to see if its icon is matched
+            foreach (Control control in tableLayoutPanel1.Controls)
+            {
+                Label iconLabel = control as Label;
+
+                iconLabel.ForeColor = iconLabel.BackColor;
+
+            }
         }
     }
 
