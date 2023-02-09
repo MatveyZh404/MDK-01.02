@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33214.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomOffice", "RoomOffice\RoomOffice.csproj", "{4CCB3E34-A254-4A0C-980E-82C0AD37FFA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CCB3E34-A254-4A0C-980E-82C0AD37FFA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CCB3E34-A254-4A0C-980E-82C0AD37FFA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CCB3E34-A254-4A0C-980E-82C0AD37FFA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CCB3E34-A254-4A0C-980E-82C0AD37FFA2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {13DD80C8-83F9-414B-AF81-3A3A447BC762}
+	EndGlobalSection
+EndGlobal

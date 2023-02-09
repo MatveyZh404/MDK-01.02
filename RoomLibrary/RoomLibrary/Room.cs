@@ -61,7 +61,7 @@ namespace RoomLibrary
     public class LivingRoom : Room
     {
         int numWin; //число окон
-        public int Numwin
+        public int NumWin
         { get { return numWin; } set { numWin = value; } }
         /// <summary>
         /// Метод возвращает информацию о комнате
@@ -75,7 +75,7 @@ namespace RoomLibrary
     /// <summary>
     /// Класс "офис"
     /// </summary>
-    public class Oficce : Room
+    public class Office : Room
     {
         int numSockets; //число розеток
         public int NumSockets
