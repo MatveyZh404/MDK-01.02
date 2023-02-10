@@ -50,9 +50,9 @@ namespace RoomLibrary
         /// Информация о комнате
         /// </summary>
         /// <returns>Возвращает строку</returns>
-        public string Info()
+        public virtual string Info()
         {
-            return "Комната площадью " + RoomArea() + "кв.м";
+            return "Комната площадью " + RoomArea() + " кв.м";
         }
     }
     /// <summary>
@@ -67,9 +67,9 @@ namespace RoomLibrary
         /// Метод возвращает информацию о комнате
         /// </summary>
         /// <returns>Возвращается строка с информацией</returns>
-        public string Info()
+        public override string Info()
         {
-            return "Жилая комната площадью " + RoomArea() + "кв.м, с" + numWin + "окнами";
+            return "Жилая комната площадбю " + RoomArea() + "кв.м, с " + numWin + " окнами";
         }
     }
     /// <summary>
@@ -90,12 +90,12 @@ namespace RoomLibrary
             return Math.Min(numSockets, num);
         }
         /// <summary>
-        /// Метод возвращает информацию об офисе
+        /// Метод возвращает информацию о офисе
         /// </summary>
-        /// <returns></returns>
-        public string Info()
+        /// <returns>Возвращается строка с информацией</returns>
+        public override string Info()
         {
-            return "Офис на " + NumWorkplaces() + "рабочих мест";
+            return "Офис на " + NumWorkplaces() + " рабочих мест";
         }
     }
 }
