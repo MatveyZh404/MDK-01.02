@@ -1,0 +1,10 @@
+C:\Users\User\VS\Map\Map\obj\Debug\Map.Form1.resources
+C:\Users\User\VS\Map\Map\obj\Debug\Map.Properties.Resources.resources
+C:\Users\User\VS\Map\Map\obj\Debug\Map.csproj.GenerateResource.cache
+C:\Users\User\VS\Map\Map\obj\Debug\Map.csproj.CoreCompileInputs.cache
+C:\Users\User\VS\Map\Map\bin\Debug\Map.exe.config
+C:\Users\User\VS\Map\Map\bin\Debug\Map.exe
+C:\Users\User\VS\Map\Map\bin\Debug\Map.pdb
+C:\Users\User\VS\Map\Map\obj\Debug\Map.exe
+C:\Users\User\VS\Map\Map\obj\Debug\Map.pdb
+C:\Users\User\VS\Map\Map\obj\Debug\Map.csproj.AssemblyReference.cache
