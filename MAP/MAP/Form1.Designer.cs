@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label7 = new System.Windows.Forms.Label();
-            this.namePoint = new System.Windows.Forms.Label();
+            this.namePlace = new System.Windows.Forms.Label();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -54,6 +54,8 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.startName = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -84,31 +86,32 @@
             this.label7.TabIndex = 23;
             this.label7.Text = "Интерактивная карта марафона Москвы 2023\r\n";
             // 
-            // namePoint
+            // namePlace
             // 
-            this.namePoint.AutoSize = true;
-            this.namePoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.namePoint.Location = new System.Drawing.Point(449, 51);
-            this.namePoint.Name = "namePoint";
-            this.namePoint.Size = new System.Drawing.Size(111, 24);
-            this.namePoint.TabIndex = 24;
-            this.namePoint.Text = "Название ";
-            this.namePoint.Visible = false;
+            this.namePlace.AutoSize = true;
+            this.namePlace.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.namePlace.Location = new System.Drawing.Point(449, 51);
+            this.namePlace.Name = "namePlace";
+            this.namePlace.Size = new System.Drawing.Size(111, 24);
+            this.namePlace.TabIndex = 24;
+            this.namePlace.Text = "Название ";
+            this.namePlace.Visible = false;
             // 
             // pictureBox16
             // 
             this.pictureBox16.Image = global::MAP.Properties.Resources.map_icon_start1;
-            this.pictureBox16.Location = new System.Drawing.Point(125, 78);
+            this.pictureBox16.Location = new System.Drawing.Point(125, 85);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(40, 40);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox16.TabIndex = 25;
             this.pictureBox16.TabStop = false;
+            this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
             // 
             // pictureBox15
             // 
             this.pictureBox15.Image = global::MAP.Properties.Resources._8Room;
-            this.pictureBox15.Location = new System.Drawing.Point(24, 153);
+            this.pictureBox15.Location = new System.Drawing.Point(24, 179);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(40, 40);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -119,7 +122,7 @@
             // pictureBox14
             // 
             this.pictureBox14.Image = global::MAP.Properties.Resources._7;
-            this.pictureBox14.Location = new System.Drawing.Point(13, 275);
+            this.pictureBox14.Location = new System.Drawing.Point(13, 288);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(40, 40);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -130,7 +133,7 @@
             // pictureBox13
             // 
             this.pictureBox13.Image = global::MAP.Properties.Resources._6;
-            this.pictureBox13.Location = new System.Drawing.Point(74, 332);
+            this.pictureBox13.Location = new System.Drawing.Point(67, 332);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(40, 40);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -152,7 +155,7 @@
             // pictureBox11
             // 
             this.pictureBox11.Image = global::MAP.Properties.Resources._4;
-            this.pictureBox11.Location = new System.Drawing.Point(326, 275);
+            this.pictureBox11.Location = new System.Drawing.Point(324, 275);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(40, 40);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -163,7 +166,7 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = global::MAP.Properties.Resources._3;
-            this.pictureBox10.Location = new System.Drawing.Point(195, 228);
+            this.pictureBox10.Location = new System.Drawing.Point(186, 222);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(40, 40);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -174,7 +177,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::MAP.Properties.Resources._2;
-            this.pictureBox9.Location = new System.Drawing.Point(270, 153);
+            this.pictureBox9.Location = new System.Drawing.Point(262, 147);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(40, 40);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -185,7 +188,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::MAP.Properties.Resources._1_png;
-            this.pictureBox8.Location = new System.Drawing.Point(171, 65);
+            this.pictureBox8.Location = new System.Drawing.Point(171, 75);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(40, 40);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -222,16 +225,18 @@
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox17.TabIndex = 26;
             this.pictureBox17.TabStop = false;
+            this.pictureBox17.Click += new System.EventHandler(this.pictureBox17_Click);
             // 
             // pictureBox18
             // 
             this.pictureBox18.Image = global::MAP.Properties.Resources.map_icon_start1;
-            this.pictureBox18.Location = new System.Drawing.Point(38, 199);
+            this.pictureBox18.Location = new System.Drawing.Point(24, 222);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(40, 40);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox18.TabIndex = 27;
             this.pictureBox18.TabStop = false;
+            this.pictureBox18.Click += new System.EventHandler(this.pictureBox18_Click);
             // 
             // pictureBox2
             // 
@@ -259,11 +264,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(552, 386);
+            this.label6.Location = new System.Drawing.Point(552, 402);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(138, 46);
+            this.label6.Size = new System.Drawing.Size(76, 23);
             this.label6.TabIndex = 9;
-            this.label6.Text = "Медициский \r\nпункт";
+            this.label6.Text = "Туалет";
             this.label6.Visible = false;
             // 
             // label5
@@ -272,20 +277,20 @@
             this.label5.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(552, 312);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(190, 46);
+            this.label5.Size = new System.Drawing.Size(150, 46);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Информационная \r\nстойка";
+            this.label5.Text = "Медицинский \r\nпункт";
             this.label5.Visible = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(552, 250);
+            this.label4.Location = new System.Drawing.Point(552, 239);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 23);
+            this.label4.Size = new System.Drawing.Size(191, 46);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Туалет";
+            this.label4.Text = "Информационное \r\nтабло";
             this.label4.Visible = false;
             // 
             // label3
@@ -301,7 +306,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::MAP.Properties.Resources.map_icon_medical;
+            this.pictureBox6.Image = global::MAP.Properties.Resources.map_icon_toilets;
             this.pictureBox6.Location = new System.Drawing.Point(402, 378);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(144, 69);
@@ -312,7 +317,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::MAP.Properties.Resources.map_icon_information;
+            this.pictureBox5.Image = global::MAP.Properties.Resources.map_icon_medical;
             this.pictureBox5.Location = new System.Drawing.Point(402, 303);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(144, 69);
@@ -323,7 +328,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::MAP.Properties.Resources.map_icon_toilets;
+            this.pictureBox4.Image = global::MAP.Properties.Resources.map_icon_information;
             this.pictureBox4.Location = new System.Drawing.Point(402, 228);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(144, 69);
@@ -343,11 +348,36 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Visible = false;
             // 
+            // startName
+            // 
+            this.startName.AutoSize = true;
+            this.startName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.startName.Location = new System.Drawing.Point(418, 65);
+            this.startName.Name = "startName";
+            this.startName.Size = new System.Drawing.Size(84, 29);
+            this.startName.TabIndex = 28;
+            this.startName.Text = "Текст";
+            this.startName.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(407, 126);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 24);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "Текст";
+            this.label8.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.startName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -360,7 +390,7 @@
             this.Controls.Add(this.pictureBox18);
             this.Controls.Add(this.pictureBox17);
             this.Controls.Add(this.pictureBox16);
-            this.Controls.Add(this.namePoint);
+            this.Controls.Add(this.namePlace);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox14);
@@ -374,7 +404,8 @@
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Интерактивная карта";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
@@ -410,7 +441,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label namePoint;
+        private System.Windows.Forms.Label namePlace;
         private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.PictureBox pictureBox18;
@@ -424,6 +455,8 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label startName;
+        private System.Windows.Forms.Label label8;
     }
 }
 
